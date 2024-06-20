@@ -5,9 +5,10 @@ import { client } from "@/app/client";
 import { useEffect, useState } from "react";
 import { claimTo, getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc721";
 import { ConnectButton, TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
-import { NFT_CONTRACT } from "../utils/contracts";
+import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { NFT } from "thirdweb";
 import { NFTCard } from "./NFTCard";
+import { StakedNFTCard } from "./StakedNFTCard";
 
 
 export const Staking = () => {
@@ -51,7 +52,7 @@ const {
     data: stakedInfo,
     refetch: refetchStakedInfo
 } = useReadContract({
-    contract: NFT_CONTRACT,
+    contract: STAKING_CONTRACT,
     method: "getStakeInfo",
     params: [account?.address||""]
 });
@@ -144,6 +145,29 @@ refetchStakedInfo={refetchStakedInfo}
     )}
 
 </div>
+</div>
+
+<hr style={{
+width: "100%",
+border: "1px solid #333"
+
+}}/>
+<div style={{width: "100%", margin: "20px 0" }} >
+    <h2>Staked GSD</h2>
+    {stakedInfo && stakedInfo[0].length > 0 ? (
+stakedInfo[0].map((tokenId: bigint) => (
+    <StakedNFTCard
+    key={tokenId}
+    tokenId={tokenId}
+    refetchStakedInfo={refetchStakedInfo}
+    refetchOwnedNFTs={getOwnedNFTs}
+    />
+))
+    ) : (
+
+        <p>You have 0 Staked GSD</p>
+    )}
+
 </div>
 
  </div>
