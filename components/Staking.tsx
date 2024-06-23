@@ -4,11 +4,13 @@ import { chain } from "@/app/chain";
 import { client } from "@/app/client";
 import { useEffect, useState } from "react";
 import { claimTo, getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc721";
-import { ConnectButton, TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
+import { TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
+import { ConnectButton } from "thirdweb/react";
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { NFT } from "thirdweb";
 import { NFTCard } from "./NFTCard";
 import { StakedNFTCard } from "./StakedNFTCard";
+import { StakeRewards } from "./StakeRewards";
 
 
 export const Staking = () => {
@@ -100,7 +102,7 @@ onTransactionConfirmed={() => {
 }}
 style= {{
     fontSize: '12px',
-    backgroundColor:"#1555ff15",
+    backgroundColor:"#333",
     color: "white",
     borderRadius:"18px",
     padding: "20px 20px",
@@ -152,24 +154,42 @@ width: "100%",
 border: "1px solid #333"
 
 }}/>
-<div style={{width: "100%", margin: "20px 0" }} >
-    <h2>Staked GSD</h2>
-    {stakedInfo && stakedInfo[0].length > 0 ? (
+
+<div>
+    
+ </div>
+ <hr style={{
+width: "100%",
+border: "1px solid #333"
+
+}}/>
+
+<div style={{width: "100%", margin: "20px 0"}}>
+<h2>Staked GSDs</h2>
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", width:"500px"}}>
+
+{stakedInfo && stakedInfo [0].length > 0 ? (
 stakedInfo[0].map((tokenId: bigint) => (
-    <StakedNFTCard
-    key={tokenId}
-    tokenId={tokenId}
-    refetchStakedInfo={refetchStakedInfo}
-    refetchOwnedNFTs={getOwnedNFTs}
-    />
+<StakedNFTCard
+key={tokenId}
+tokenId={tokenId}
+refetchStakedInfo={refetchStakedInfo}
+refetchOwnedNFTs={getOwnedNFTs}
+/>
 ))
-    ) : (
+) : (
 
-        <p>You have 0 Staked GSD</p>
-    )}
-
+    <p> You have 0 staked GSDs </p>
+)}
 </div>
+</div>
+<hr style={{
+width: "100%",
+border: "1px solid #333"
 
+}}/>
+
+<StakeRewards/>
  </div>
         )
     }

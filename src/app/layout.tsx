@@ -5,6 +5,8 @@ import { ThirdwebProvider } from "@/app/thirdweb";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
 export const metadata: Metadata = {
   title: "Miners nation GSD",
   description: "GSD staking app",
@@ -17,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={inter.className}>
+      <body 
+      className={inter.className}
+      
+      >
 
         <ThirdwebProvider>
        {children}

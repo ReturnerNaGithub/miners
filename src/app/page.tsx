@@ -14,23 +14,13 @@ flexDirection: "column",
 alignItems: "center",
 margin: "20px auto",
 width:"500px",
-
-
-
-    }}>
-
-
-      <h1>Miners Nation</h1>
+ }}>
+ <h1>Miners Nation</h1>
 <ConnectEmbed
 client={client}
 chain={chain}
 />
 <Staking />
-
-    </div>
-    
-    
+    </div> 
     )
-
-
 }

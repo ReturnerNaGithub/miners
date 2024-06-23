@@ -46,6 +46,16 @@ transaction={() => (
         refetchStakedInfo();
         refetchOwnedNFTs();
     }}
+    style={{
+        border:"none",
+        backgroundColor:"#161616",
+        color:"#fff",
+        padding: "10px",
+        borderRadius:"10px",
+        cursor:"pointer",
+        width:"100%",
+        fontSize: "12px"
+    }}
 >Withdraw</TransactionButton>
     </div>
  )

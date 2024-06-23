@@ -5,6 +5,7 @@ import { approve } from "thirdweb/extensions/erc20";
 import { MediaRenderer, TransactionButton } from "thirdweb/react";
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 
+
 type OwnedNFTsProps = {
   nft: NFT;
   refetchOwnedNFTs: () => void;
@@ -42,8 +43,7 @@ export const NFTCard = ({
           borderRadius: "10px",
           cursor: "pointer",
           width: "100%",
-        }}
-      >
+        }}>
         Stake
       </button>
       {isModalOpen && (
@@ -90,7 +90,7 @@ export const NFTCard = ({
                 Close
               </button>
             </div>
-            <h3 style={{ margin: "10px 0", backgroundColor: "white" }}>
+            <h3 style={{ margin: "10px 0", color: "white" }}>
               You are the best staker
             </h3>
             <MediaRenderer
@@ -132,7 +132,7 @@ export const NFTCard = ({
                   refetchOwnedNFTs();
                   refetchStakedInfo();
                 }}
-                style={{ width: "100%" }}
+                style={{ width: "100%", color: "red" }}
               >
                 Stake
               </TransactionButton>
