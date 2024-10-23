@@ -1,7 +1,7 @@
 import { client } from "@/app/client";
 import { useState } from "react";
-import { NFT, prepareContractCall } from "thirdweb";
-import { approve } from "thirdweb/extensions/erc20";
+import { Hex, NFT, prepareContractCall } from "thirdweb";
+import { approve } from "thirdweb/extensions/erc721";
 import { MediaRenderer, TransactionButton } from "thirdweb/react";
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 
@@ -38,7 +38,7 @@ export const NFTCard = ({
         style={{
           border: "none",
           backgroundColor: "#161616",
-          color: "#f2ff6fff",
+          color: "#f77fff26",
           padding: "10px",
           borderRadius: "10px",
           cursor: "pointer",
@@ -54,7 +54,7 @@ export const NFTCard = ({
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 20, 0.5)",
+            backgroundColor: "rgba(20, 60, 20, 0.5)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -63,7 +63,7 @@ export const NFTCard = ({
           <div
             style={{
               minWidth: "300px",
-              backgroundColor: "#222",
+              backgroundColor: "#000",
               padding: "20px",
               borderRadius: "10px",
               display: "flex",
@@ -91,7 +91,7 @@ export const NFTCard = ({
               </button>
             </div>
             <h3 style={{ margin: "10px 0", color: "white" }}>
-              You are the best staker
+              You will STAKE GSD NFT
             </h3>
             <MediaRenderer
               client={client}
@@ -103,27 +103,26 @@ export const NFTCard = ({
             />
             {!isApproved ? (
               <TransactionButton
-                transaction={() =>
-                  approve({
+                transaction={() => (
+                 approve({
                     contract: NFT_CONTRACT,
-                    to: STAKING_CONTRACT.address,
-                    tokenId: nft.id,
+                    to: STAKING_CONTRACT.address as Hex,
+                    tokenId: nft.id
                   })
-                }
+                 )}
+                 
                 style={{
-                  width: "100%",
+                  width: "50%",
                 }}
                 onTransactionConfirmed={() => setIsApproved(true)}
-              >
-                Approve
-              </TransactionButton>
+              >Approve</TransactionButton>
             ) : (
               <TransactionButton
                 transaction={() =>
                   prepareContractCall({
                     contract: STAKING_CONTRACT,
                     method: "stake",
-                    params: [[nft.id]],
+                    params: [[nft.id]]
                   })
                 }
                 onTransactionConfirmed={() => {

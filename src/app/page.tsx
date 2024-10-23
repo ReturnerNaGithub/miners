@@ -8,19 +8,23 @@ export default function Home() {
 
   return (
 
-    <div style={{
-display: "flex",
-flexDirection: "column",
-alignItems: "center",
-margin: "20px auto",
-width:"500px",
- }}>
- <h1>Miners Nation</h1>
+    <div>
+<div style={{
+      display: "fixed",
+      alignItems: "center",
+      marginTop: "0px",
+      marginBottom: "0px",
+      marginLeft:"0px",
+      fill:"{true}",
+      
+      background: "black",
+       }}><div>
 <ConnectEmbed
 client={client}
 chain={chain}
 />
-<Staking />
-    </div> 
+<Staking /></div></div>
+
+    </div>
     )
 }

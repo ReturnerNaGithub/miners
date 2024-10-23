@@ -1,4 +1,4 @@
-import { useActionState, useEffect } from "react";
+import { useEffect } from "react";
 import { balanceOf } from "thirdweb/extensions/erc20";
 import { TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
 import { REWARD_TOKEN_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
@@ -7,16 +7,15 @@ import { prepareContractCall, toEther } from "thirdweb";
 export const StakeRewards = () => {
 const account = useActiveAccount();
 
-const{
-    data: tokenBalance,
+const {
     isLoading: isTokenBalanceLoading,
     refetch: refetchTokenBalance,
 } = useReadContract(
-balanceOf,
-{
-contract: REWARD_TOKEN_CONTRACT,
-address: account?.address || "",
-}
+    balanceOf,
+    {
+        contract: REWARD_TOKEN_CONTRACT,    
+        address: account?.address || "",
+    }
 );
 const {
     data: stakedInfo,
@@ -24,7 +23,7 @@ const {
 } = useReadContract({
     contract: STAKING_CONTRACT,
     method: "getStakeInfo",
-    params: [account?.address || ""],
+    params: [account?.address || ""],//ne vem ce je to dobro
 });
 
 useEffect(() => {
@@ -38,11 +37,11 @@ useEffect(() => {
 
 
     return (
-        <div style={{ width:"100%", margin:"20px 0", display:"flex", flexDirection:"column" }}>
+        <div style={{ width:"100%", display:"flex", flexDirection:"column" }}>
             {!isTokenBalanceLoading && (
-            <p>Wallet Balance: {toEther(BigInt(tokenBalance!.toString()))}</p>
+            <p>Wallet Balance</p>
            )}
-<h2>Stake Rewards MINE tokens: {stakedInfo && toEther(BigInt(stakedInfo[1].toString()))} </h2>
+<h2>Stake Rewards MINE tokens: {stakedInfo && toEther(BigInt(stakedInfo[1]?.toString() ?? '0'))} </h2>
 <TransactionButton
 transaction={() => (
     prepareContractCall({
@@ -58,13 +57,13 @@ onTransactionConfirmed={() => {
 }}
 style ={{
     border:"none",
-    backgroundColor:"#333",
-    color:"#fff",
-    padding:"10px",
-    borderRadius:"10px",
-    cursor:"pointer",
-    width:"100%",
-    fontSize:"12px"
+        backgroundColor:"#333",
+        color:"#fff",
+        padding: "10px",
+        borderRadius:"10px",
+        cursor:"pointer",
+        width:"20%",
+        fontSize: "12px"
 
 }}
 >Claim MINE tokens</TransactionButton>

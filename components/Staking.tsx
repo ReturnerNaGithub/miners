@@ -1,5 +1,6 @@
 "use client";
 
+
 import { chain } from "@/app/chain";
 import { client } from "@/app/client";
 import { useEffect, useState } from "react";
@@ -7,7 +8,7 @@ import { claimTo, getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc7
 import { TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
 import { ConnectButton } from "thirdweb/react";
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
-import { NFT } from "thirdweb";
+import { NFT} from "thirdweb";
 import { NFTCard } from "./NFTCard";
 import { StakedNFTCard } from "./StakedNFTCard";
 import { StakeRewards } from "./StakeRewards";
@@ -56,7 +57,7 @@ const {
 } = useReadContract({
     contract: STAKING_CONTRACT,
     method: "getStakeInfo",
-    params: [account?.address||""]
+    params: [ account?.address || "" ]
 });
 
     if(account){
@@ -65,11 +66,15 @@ const {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor:"#1515",
+            backgroundColor:"#161616",
             borderRadius:"8px",
-            width:"500px",
+            borderColor:"#f4ff11",
+            opacity: 0.7,
+            width:"960px",
             padding: "20px",
-            
+            marginTop:"4px",
+            marginBottom:"240px",
+            color:"white"
             
             }}>
 <ConnectButton
@@ -85,7 +90,7 @@ margin: "20px 0",
 width: "100%",
 }}>
 
-<h2 style={{marginRight: "20px"}}>Your GSD NFT vote token to claim</h2>
+<h2 style={{margin: "20px"}}>Your GSD to claim</h2>
 
 <TransactionButton
 transaction={() => (
@@ -150,8 +155,8 @@ refetchStakedInfo={refetchStakedInfo}
 </div>
 
 <hr style={{
-width: "100%",
-border: "1px solid #333"
+width: "50%",
+border: "10px solid #333"
 
 }}/>
 
