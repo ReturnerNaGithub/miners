@@ -24,7 +24,7 @@ justifyContent: "center",
         <img
           src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmNrfUAJ1E3WqtnwZL9XnTW37ZZVsz3AJcuCPVuzHMATnr/free%202play...png"
           alt="reklama3"
-          width={480}
+          width={520}
           height={300}
         />
       </div>
@@ -32,7 +32,7 @@ justifyContent: "center",
         <img
           src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmNrfUAJ1E3WqtnwZL9XnTW37ZZVsz3AJcuCPVuzHMATnr/hero%20reklama.png"
           alt="reklama4"
-          width={480}
+          width={520}
           height={300}
         />
       </div>
