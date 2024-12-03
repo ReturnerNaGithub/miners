@@ -3,6 +3,7 @@ import { balanceOf } from "thirdweb/extensions/erc20";
 import { TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
 import { REWARD_TOKEN_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { prepareContractCall, toEther } from "thirdweb";
+import Token from "./Token";
 
 export const StakeRewards = () => {
 const account = useActiveAccount();
@@ -37,11 +38,23 @@ useEffect(() => {
 
 
     return (
-        <div style={{ width:"100%", display:"flex", flexDirection:"column" }}>
+        <div style={{
+             width:"50%", 
+             height:"100px",
+             display:"flex",
+             gap:"100px",
+             padding:"20px",
+             marginTop:"22px",
+             alignItems: 'center',
+justifyContent: "center",
+             flexDirection:"row" }}>
             {!isTokenBalanceLoading && (
-            <p>Wallet Balance</p>
+            <div>
+<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmUTYURaYUS4PJoTmPQPgu3ETDuaxkhXwDgpcza1Y1a332/web%20front%20page%20animirana.gif" alt ="token" />
+
+            </div>
            )}
-<h2>Stake Rewards MINE tokens: {stakedInfo && toEther(BigInt(stakedInfo[1]?.toString() ?? '0'))} </h2>
+<h2 className="text-2xl font-bold  text-white">Your Rewards : {stakedInfo && toEther(BigInt(stakedInfo[1]?.toString() ?? '0'))} </h2>
 <TransactionButton
 transaction={() => (
     prepareContractCall({
@@ -50,24 +63,27 @@ transaction={() => (
     })
 )}
 onTransactionConfirmed={() => {
-    alert("Mine Tokens claimed");
+    alert("Tokens claimed");
     refetchStakedInfo();
     refetchTokenBalance();
 
 }}
 style ={{
-    border:"none",
-        backgroundColor:"#333",
-        color:"#fff",
-        padding: "10px",
-        borderRadius:"10px",
-        cursor:"pointer",
-        width:"20%",
-        fontSize: "12px"
+    display:"flex",
+    fontSize: '12px',
+    backgroundColor:"#116c7a",
+    color: "white",
+    borderRadius:"18px",
+    padding: "10px 10px",
+    marginTop:"12px",
+    height: "50px",
+    width:"10px",
+
 
 }}
->Claim MINE tokens</TransactionButton>
+>Claim MINE</TransactionButton>
 
         </div>
+        
     );
 };

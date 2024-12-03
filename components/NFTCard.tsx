@@ -36,13 +36,13 @@ export const NFTCard = ({
       <button
         onClick={() => setIsModalOpen(true)}
         style={{
-          border: "none",
-          backgroundColor: "#161616",
-          color: "#f77fff26",
-          padding: "10px",
-          borderRadius: "10px",
-          cursor: "pointer",
-          width: "100%",
+          fontSize: '12px',
+    backgroundColor:"#116c7a",
+    color: "white",
+    borderRadius:"18px",
+    padding: "10px 0px",
+    height: "50px",
+    width:"100px",
         }}>
         Stake
       </button>
@@ -54,7 +54,7 @@ export const NFTCard = ({
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(20, 60, 20, 0.5)",
+            backgroundColor: "rgba(49, 49, 49, 0.5)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -73,7 +73,7 @@ export const NFTCard = ({
           >
             <div
               style={{
-                display: "flex",
+                display: "fixed",
                 justifyContent: "flex-end",
                 width: "100%",
               }}
@@ -81,10 +81,12 @@ export const NFTCard = ({
               <button
                 onClick={() => setIsModalOpen(false)}
                 style={{
-                  border: "none",
-                  backgroundColor: "transparent",
-                  color: "#fff",
-                  cursor: "pointer",
+    
+                  width: "20%",
+                  backgroundColor:"#116c7a",
+                  color: "white",
+                  borderRadius: "10px",
+                 
                 }}
               >
                 Close
@@ -113,6 +115,8 @@ export const NFTCard = ({
                  
                 style={{
                   width: "50%",
+                  backgroundColor:"#116c7a",
+                  color: "white",
                 }}
                 onTransactionConfirmed={() => setIsApproved(true)}
               >Approve</TransactionButton>

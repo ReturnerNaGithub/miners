@@ -13,12 +13,14 @@
     "pino": "^9.2.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-read-more-read-less": "^1.0.7",
     "thirdweb": "^5.29.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "daisyui": "^4.12.14",
     "typescript": "^5"
   }
 }

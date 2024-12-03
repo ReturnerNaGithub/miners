@@ -1,17 +1,15 @@
 "use client";
 
-
-import { chain } from "@/app/chain";
-import { client } from "@/app/client";
 import { useEffect, useState } from "react";
 import { claimTo, getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc721";
 import { TransactionButton, useActiveAccount, useReadContract } from "thirdweb/react";
-import { ConnectButton } from "thirdweb/react";
+
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { NFT} from "thirdweb";
 import { NFTCard } from "./NFTCard";
 import { StakedNFTCard } from "./StakedNFTCard";
 import { StakeRewards } from "./StakeRewards";
+
 
 
 export const Staking = () => {
@@ -62,37 +60,70 @@ const {
 
     if(account){
         return(
+            
             <div style= {{
+            justifyContent: "center",
+            alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            backgroundColor:"#161616",
-            borderRadius:"8px",
-            borderColor:"#f4ff11",
             opacity: 0.7,
-            width:"960px",
-            padding: "20px",
-            marginTop:"4px",
-            marginBottom:"240px",
-            color:"white"
+            padding: "4px 4px",
+            marginTop:"18px",
+            backgroundColor:"#151515",
+            
             
             }}>
-<ConnectButton
- client = {client}
- chain= {chain}
-/>
-<div style= {{
-display: 'flex',
-flexDirection: 'row',
-alignItems: 'center',
-justifyContent: 'space-between',
-margin: "20px 0",
-width: "100%",
-}}>
 
-<h2 style={{margin: "20px"}}>Your GSD to claim</h2>
+<div className="max-w-2xl pr-12 mr-2">
+      <div style={{
+        display: 'flex',
+        justifyContent: 'left',
+       
+      }}>
+        <div className="w-1/2 mb-12">
+          <img
+            src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmdBbQV6Y4a75hbauvFuwQ1SoHjwMr6FttHFjqHBGs3siX"
+            alt="zamena"
+            width={850}
+            height={600}
+            
+          />
+        </div>
+        <div className="max-w-2xl pr-12 mr-2">
+      
 
-<TransactionButton
+      </div>
+        <div style={{
+        display: 'fixed',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginTop:"82px",
+       
+      }}>
+          <h2 style= {{
+            justifyContent: "center",
+           fontSize:"44px",
+            padding: "4px 4px",
+            marginTop:"18px",
+            
+            }}>GSD NFT</h2>
+          <div className="w-1/3 pr-16 py-16 ">
+          
+         By purchasing this NFT,
+         you’ll begin earning MINE tokens. 
+         As the primary investor and shareholder,
+         holding this GSD grants you the exclusive opportunities like:
+         <li>to produce MINE game tokens
+          as the first and only holder.</li>
+          <li>VIP section for Airdrops and Pre-sale</li>
+          <li>Shareholding Discord room</li>
+          <li>Placing MINE tokens on the market and determent the price</li>
+          <li>First testing players before Level in the game comes out</li>
+          <li>You can have only 1 GSD in your wallet</li>
+          </div>
+         
+
+          <TransactionButton
 transaction={() => (
 claimTo({
     contract: NFT_CONTRACT,
@@ -102,40 +133,56 @@ claimTo({
 
 )}
 onTransactionConfirmed={() => {
-    alert("Your journey begins");
+    alert("Congratulation,Your journey begins");
     getOwnedNFTs();
 }}
 style= {{
+    display:"flex",
     fontSize: '12px',
-    backgroundColor:"#333",
+    backgroundColor:"#116c7a",
     color: "white",
     borderRadius:"18px",
-    padding: "20px 20px",
+    padding: "10px 10px",
+    marginTop:"42px",
+    height: "50px",
+    width:"10px",
 }}
-
-
 >Claim NFT</TransactionButton>
+        </div>
+      </div>
+    </div>
 
-</div>
-<hr style={{
-width: "100%",
-border: "1px solid #333"
 
-}}/>
+
+
+
 <div style={{
-    margin: "20px 0",
-    width: "100%",
-    
-    }}>
 
-<h2>Owned GSD NFT</h2>
+    width: "16%",
+    border: "2px solid ",
+    padding: "20px",
+    marginTop:"12px",
+    }}>
+<h2>Your GSD NFT</h2>
 
 <div style={{
     display: "flex",
     flexDirection:"row",
     flexWrap: "wrap",
-    width:"500px"
+    width:"500px",
+    marginTop:"12px 0",
 }}>
+    <p style={{ display: "flex",
+    flexDirection:"row",
+    flexWrap: "wrap",
+    width:"500px"}}>
+        
+    </p>
+    <p style={{ display: "flex",
+    flexDirection:"row",
+    flexWrap: "wrap",
+    marginTop:"10px",
+    width:"500px"}}>Daily Rewards: 1 MINE token</p>
     {ownedNFTs && ownedNFTs.length > 0 ? (
 ownedNFTs.map((nft) =>(
 <NFTCard
@@ -144,34 +191,39 @@ nft={nft}
 refetchOwnedNFTs={getOwnedNFTs}
 refetchStakedInfo={refetchStakedInfo}
 />
+
 ))
     ) : (
 
-<p>You own 0 NFTs</p>
+<p>You own: 0 GSD</p>
 
     )}
 
 </div>
+
+
 </div>
 
-<hr style={{
-width: "50%",
-border: "10px solid #333"
-
-}}/>
+<StakeRewards/>
 
 <div>
     
  </div>
  <hr style={{
-width: "100%",
-border: "1px solid #333"
+width: "90%",
+border: "1px dotted #116c7a",
+alignItems: 'center',
+justifyContent: "center",
 
 }}/>
 
-<div style={{width: "100%", margin: "20px 0"}}>
-<h2>Staked GSDs</h2>
-<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", width:"500px"}}>
+<div style={{width: "50%",alignItems: 'center',
+justifyContent: "center",}}>
+<h2 style={{
+justifyContent: "center",alignItems: 'center',
+}}>Staked GSD</h2>
+<div style={{ display: "flex",width: "50%", flexDirection: "row", flexWrap: "wrap", alignItems: 'center',
+justifyContent: "center"}}>
 
 {stakedInfo && stakedInfo [0].length > 0 ? (
 stakedInfo[0].map((tokenId: bigint) => (
@@ -184,17 +236,17 @@ refetchOwnedNFTs={getOwnedNFTs}
 ))
 ) : (
 
-    <p> You have 0 staked GSDs </p>
+    <p> You have 0 staked GSD </p>
 )}
 </div>
 </div>
 <hr style={{
-width: "100%",
-border: "1px solid #333"
+width: "90%",
+border: "1px double #116c7a"
 
 }}/>
 
-<StakeRewards/>
+
  </div>
         )
     }
