@@ -44,7 +44,44 @@ body {
    max-width: 60%;
    margin-inline: auto;
  }
- 
+
+ /* gsd-nft style */
+ .gsd-nft {
+   display: grid;
+   grid-template-columns: 5fr 5fr;
+   grid-gap: 1rem;
+   align-items: center;
+   padding: 0 12px;
+ }
+ .gsd-nft-subgrp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+ }
+ .gsd-box {
+   margin-top: 12px;
+ }
+ .stake-reward {
+   width: 50%;
+   display: flex;
+   gap: 100px;
+   padding: 20px;
+   margin-top: 22px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+ }
+ .stake-reward-subgrp {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 100px;
+ }
+ .stake-reward-subgrp>h2 {
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+ }
  
 /* responsive part */
 
@@ -53,6 +90,9 @@ body {
       max-width: 80%;
       gap: 30px;
    }
+   .stake-reward, .stake-reward-subgrp {
+      gap: 50px;
+    }
 }
 @media (max-width: 768px) {
    .app-for-nft {
@@ -61,6 +101,30 @@ body {
    .news {
       grid-template-columns: 100%;
    }
+   .gsd-nft {
+      grid-template-columns: 100%;
+    }
+    .gsd-box {
+      margin-top: 24px;
+    }
+    .stake-reward, .stake-reward-subgrp {
+      gap: 20px;
+    }
+    .stake-reward-subgrp {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+}
+
+@media (max-width: 600px) { 
+   .stake-reward {
+      flex-direction: column;
+   } 
+   .gsd-nft-subgrp {
+      align-items: center;
+   }
+
 }
 @media (max-width: 425px) { 
    .header {
