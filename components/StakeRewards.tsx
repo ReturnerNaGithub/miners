@@ -5,6 +5,8 @@ import { REWARD_TOKEN_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { prepareContractCall, toEther } from "thirdweb";
 import Token from "./Token";
 
+
+
 export const StakeRewards = () => {
     const account = useActiveAccount();
 
@@ -38,24 +40,29 @@ export const StakeRewards = () => {
 
 
     return (
+
+        
         <div style={{
-             width:"50%", 
-             height:"100px",
+            width: "fit-content",
+             height:"fit-content",
              display:"flex",
-             gap:"100px",
-             padding:"20px",
-             marginTop:"22px",
-             alignItems: 'center',
+             gap:"40px",
+             padding:"40px",
+             marginTop:"20px",
+             alignItems: 'left',
 justifyContent: "center",
-             flexDirection:"row" }}>
+             background: "linear-gradient(45deg, #116c7a, #041524)",
+             borderRadius:"25px",
+
+             }}>
             {!isTokenBalanceLoading && (
             <div>
-<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmUTYURaYUS4PJoTmPQPgu3ETDuaxkhXwDgpcza1Y1a332/web%20front%20page%20animirana.gif" alt ="token" />
+<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmagiPm6p9Y3psGqZbHF5rAf2YBPe48EkEDKKoaP8KACFo/Mine%20Token_BG.gif" alt ="token" />
 
                 </div>
             )}
             <div className="stake-reward-subgrp">
-                <h2 className="text-2xl font-bold  text-white">Your Rewards : {stakedInfo && toEther(BigInt(stakedInfo[1]?.toString() ?? '0'))} </h2>
+                <h2 className="text-2xl">Rewards : {stakedInfo && toEther(BigInt(stakedInfo[1]?.toString() ?? '0'))} </h2>
                 <TransactionButton
                     transaction={() => (
                         prepareContractCall({
@@ -74,10 +81,10 @@ justifyContent: "center",
                         fontSize: '12px',
                         backgroundColor:"#116c7a",
                         color: "white",
-                        borderRadius:"18px",
                         padding: "10px 10px",
                         height: "50px",
                         width:"10px",
+                        borderRadius:"25px",
 
 
                     }}

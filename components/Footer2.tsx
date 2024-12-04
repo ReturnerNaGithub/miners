@@ -1,4 +1,5 @@
 import React from 'react'
+import FooterIcons from './FooterIcons'
 
 const Footer2 = () => {
   return (
@@ -32,20 +33,21 @@ const Footer2 = () => {
 
       </div>
 
-      <div>
+      <div><FooterIcons />
         <h2
           style={{
             color: "white",
             fontSize: "1.2rem",
             fontWeight: "bold",
             marginTop: "0.5rem",
-            marginBottom:"0.5rem",
+            marginBottom:"0.2rem",
             textAlign: "center",
             justifyContent: "center",
           }}
         >
           Powered by Gaming Studio Damana
         </h2>
+        
       </div>
     </div>
 

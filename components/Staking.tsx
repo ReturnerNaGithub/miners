@@ -149,8 +149,8 @@ style= {{
 
                 <div className="gsd-box" style={{
 
-    width: "16%",
-    border: "2px solid ",
+    width: "fit-content",
+    border:"1px solid #116c7a",
     padding: "20px",
     marginTop:"12px",
     }}>
@@ -192,21 +192,27 @@ ownedNFTs.map((nft) =>(
                 <div>
 
                 </div>
-                <hr style={{
-                    width: "90%",
-                    border: "1px dotted #116c7a",
-                    alignItems: 'center',
-                    justifyContent: "center",
+           
 
-}}/>
+                <div className="gsd-box" style={{
 
-<div style={{width: "50%",alignItems: 'center',
-justifyContent: "center",}}>
+width: "fit-content",
+border:"1px solid #116c7a",
+padding: "20px",
+marginTop:"12px",
+}}>
                     <h2 style={{
-justifyContent: "center",alignItems: 'center',
+justifyContent: "center",
+alignItems: 'center',
                     }}>Staked GSD</h2>
-<div style={{ display: "flex",width: "50%", flexDirection: "row", flexWrap: "wrap", alignItems: 'center',
-justifyContent: "center"}}>
+<div style={{
+     display: "flex",
+     width: "100%",
+      flexDirection: "row",
+       flexWrap: "wrap",
+        alignItems: 'center',
+justifyContent: "center"
+}}>
 
 {stakedInfo && stakedInfo [0].length > 0 ? (
                             stakedInfo[0].map((tokenId: bigint) => (
@@ -223,14 +229,7 @@ justifyContent: "center"}}>
 )}
 </div>
 </div>
-<hr style={{
-width: "90%",
-border: "1px double #116c7a"
-
-}}/>
-
-
- </div>
+</div>
         )
     }
 

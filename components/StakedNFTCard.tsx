@@ -56,7 +56,7 @@ transaction={() => (
         width:"100%",
         fontSize: "12px"
     }}
->Withdraw</TransactionButton>
+>Unstake</TransactionButton>
     </div>
  )
 };
