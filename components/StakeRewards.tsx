@@ -39,18 +39,23 @@ useEffect(() => {
 
     return (
         <div style={{
-             width:"50%", 
-             height:"100px",
+             width:"60%", 
+             height:"120px",
              display:"flex",
              gap:"100px",
              padding:"20px",
              marginTop:"22px",
+             border: "2px solid ",
              alignItems: 'center',
 justifyContent: "center",
              flexDirection:"row" }}>
             {!isTokenBalanceLoading && (
             <div>
-<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmUTYURaYUS4PJoTmPQPgu3ETDuaxkhXwDgpcza1Y1a332/web%20front%20page%20animirana.gif" alt ="token" />
+<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmYAZjFNmvDpZmi9p5agLrjkx8qmCm56L7Fx4y1yYexkGP"
+ alt ="token"
+ 
+
+  />
 
             </div>
            )}

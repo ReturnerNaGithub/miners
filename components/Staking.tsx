@@ -158,9 +158,9 @@ style= {{
 
 <div style={{
 
-    width: "16%",
-    border: "2px solid ",
+    width: "40%",
     padding: "20px",
+    border: " 1px solid green",
     marginTop:"12px",
     }}>
 <h2>Your GSD NFT</h2>
@@ -240,13 +240,6 @@ refetchOwnedNFTs={getOwnedNFTs}
 )}
 </div>
 </div>
-<hr style={{
-width: "90%",
-border: "1px double #116c7a"
-
-}}/>
-
-
  </div>
         )
     }

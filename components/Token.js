@@ -5,9 +5,10 @@ const Token = ({src, alt}) => {
   src={src} 
   alt={alt}
   style={{
-    width: '200px',
-    height: '100%',
-    objectFit:"contain"
+    width: '150px',
+    height: '150%',
+    objectFit:"contain",
+    borderRadius:"50px",
   }}
    />;
     
