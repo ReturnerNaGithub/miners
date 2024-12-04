@@ -221,14 +221,7 @@ justifyContent: "center"}}>
                             <p> You have 0 staked GSD </p>
                         )}
                     </div>
-                </div>
-                <hr style={{
-                    width: "90%",
-                    border: "1px double #116c7a"
-
-}}/>
-
-
+            
             </div>
         )
     }
