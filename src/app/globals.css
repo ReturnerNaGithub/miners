@@ -83,7 +83,35 @@ body {
   display: block;
   white-space: nowrap;
  }
- 
+.back-btn {
+  background-color:#116c7a;
+  color: aliceblue;
+  border-radius: 50px;
+  height: 40px;
+}
+ .icons {
+height: 50px;
+width: 50px;
+ }
+ .youtube{
+  color:#116c7a;
+ }
+ .twitter{
+  color:#116c7a;
+ }
+ .facebook{
+  color:#116c7a;
+ }
+ .instagram{
+  color:#116c7a;
+ }
+ .go{
+  color:#116c7a;
+ }
+ .discord{
+  color:#116c7a;
+ }
+
 /* responsive part */
 
 @media (max-width: 1024px) {

@@ -1,5 +1,6 @@
-import React from 'react'
-import FooterIcons from './FooterIcons'
+import React from 'react';
+import SocialIcons from "./SocialIcons";// Import the SocialIcons component
+
 
 const Footer2 = () => {
   return (
@@ -33,7 +34,7 @@ const Footer2 = () => {
 
       </div>
 
-      <div><FooterIcons />
+      <div>
         <h2
           style={{
             color: "white",
@@ -42,9 +43,15 @@ const Footer2 = () => {
             marginTop: "0.5rem",
             marginBottom:"0.2rem",
             textAlign: "center",
+            gap:"20px",
             justifyContent: "center",
+          }}>
+          <div style={{
+            
+            gap:"22px"
           }}
-        >
+        ><SocialIcons />
+        </div>
           Powered by Gaming Studio Damana
         </h2>
         

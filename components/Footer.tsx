@@ -8,15 +8,18 @@ const Footer = () => {
       <div className='app-for-nft'>
         <div className="mt-0">
           <img
-            src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/Qma49LjDEwqz3TePcBrWUwtviui9YJwHEHqqXXShYy4jgp/Miners%20nation%20-%20LOGO%20-%20BG.png"
+            src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmRYKJ51C3utzYfGnoKiPxrCTCnhyJ5DsvvsAcwqxr921v"
             alt="reklama1"
-            width={800}
-            height={400}
+            width={720}
+            height={380}
             style={{
-              maxWidth: '100%',
-              width: "100%",
-              height: "100%",
-              objectFit: "contain"
+              maxWidth: '80%',
+              height: "80%",
+              objectFit: "contain",
+              borderRadius:"10px ",
+              border:"2px solid black",
+              marginLeft:"40px"
+              
             }}
           />
         </div>

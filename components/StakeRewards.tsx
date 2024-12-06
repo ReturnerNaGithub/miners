@@ -46,10 +46,10 @@ export const StakeRewards = () => {
             width: "fit-content",
              height:"fit-content",
              display:"flex",
-             gap:"40px",
+             gap:"60px",
              padding:"40px",
              marginTop:"20px",
-             alignItems: 'left',
+             alignItems: 'center',
 justifyContent: "center",
              background: "linear-gradient(45deg, #116c7a, #041524)",
              borderRadius:"25px",
@@ -57,7 +57,8 @@ justifyContent: "center",
              }}>
             {!isTokenBalanceLoading && (
             <div>
-<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmagiPm6p9Y3psGqZbHF5rAf2YBPe48EkEDKKoaP8KACFo/Mine%20Token_BG.gif" alt ="token" />
+<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmZS3PrtyL5wpEcxPfXynnhw3mPrmgychRuxuXJRBZSqgq"
+ alt ="token" />
 
                 </div>
             )}
@@ -83,8 +84,9 @@ justifyContent: "center",
                         color: "white",
                         padding: "10px 10px",
                         height: "50px",
-                        width:"10px",
+                        width:"20px",
                         borderRadius:"25px",
+                        marginRight:"0px"
 
 
                     }}

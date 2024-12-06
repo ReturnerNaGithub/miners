@@ -15,6 +15,7 @@ const Head = () => {
         width={200}
         className='logo'
       />
+     <button className=' back-btn'>Back to WebPage</button>
 
       <ConnectButton
         client = {client}
