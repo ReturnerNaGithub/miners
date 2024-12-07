@@ -38,14 +38,6 @@ function SocialIcons ()  {
       >
        <FaYoutube className="icons youtube" />
       </a>
-      
-      <a
-        href="https://discord.gg/8DZxZBrC"
-        target="_blank"
-        rel="noopener noreferrer" // Security and performance
-      >
-       <FaDiscord  className="icons discord" />
-      </a>
       <a
         href="https://discord.gg/8DZxZBrC"
         target="_blank"
@@ -53,7 +45,13 @@ function SocialIcons ()  {
       >
         <GoMail className="icons go"/>
       </a>
-       
+       <a
+        href="https://discord.gg/8DZxZBrC"
+        target="_blank"
+        rel="noopener noreferrer" // Security and performance
+      >
+       <FaDiscord  className="icons discord" />
+      </a>
     
     </div>
   );

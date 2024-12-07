@@ -19,6 +19,7 @@ body {
    justify-content: space-between; 
    padding: 10px 20px;
  } 
+ 
 
 /* app-for-nft style */
 .app-for-nft {
@@ -95,21 +96,27 @@ width: 50px;
  }
  .youtube{
   color:#116c7a;
+  margin-right: 16px;
  }
  .twitter{
   color:#116c7a;
+  margin-right: 16px;
  }
  .facebook{
   color:#116c7a;
+  margin-right: 16px;
  }
  .instagram{
   color:#116c7a;
+  margin-right: 16px;
  }
  .go{
   color:#116c7a;
+  margin-right: 16px;
  }
  .discord{
   color:#116c7a;
+  margin-right: 16px;
  }
 
 /* responsive part */

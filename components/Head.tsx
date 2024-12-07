@@ -7,16 +7,18 @@ const Head = () => {
   return (
 
 
-    <div className='header'>
-      <img
-        src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/Qma49LjDEwqz3TePcBrWUwtviui9YJwHEHqqXXShYy4jgp/Miners%20nation%20-%20LOGO%20-%20BG.png"
-        alt="logo"
-        height={100}
-        width={200}
-        className='logo'
-      />
-     <button className=' back-btn'>Back to WebPage</button>
 
+    <div className='header'>
+
+     <a 
+href="https://www.facebook.com/GamingStudioDamana"  
+target="_blank" 
+rel="noopener noreferrer">
+  <img src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/Qma49LjDEwqz3TePcBrWUwtviui9YJwHEHqqXXShYy4jgp/Miners%20nation%20-%20LOGO%20-%20BG.png"
+  alt="logo"
+  height={100}
+  width={200} />
+</a>
       <ConnectButton
         client = {client}
         chain= {chain}
