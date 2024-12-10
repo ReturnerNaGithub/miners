@@ -91,6 +91,8 @@ justifyContent: "center",
 
                     }}
                 >Claim MINE</TransactionButton>
+               
+                   
             </div>
         </div>
 

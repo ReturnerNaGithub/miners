@@ -138,7 +138,19 @@ style= {{
                                     height: "50px",
     width:"10px",
                                 }}
-                            >Claim NFT</TransactionButton>
+                            >Buy NFT</TransactionButton>
+                             <div>
+                <h4
+                style= {{
+                    display:"flex",
+                    fontSize: '12px',
+                    color: "white",
+                    marginLeft:"36px",
+                    height: "50px",
+                    width:"100px",
+                                                }}
+                >Price: 300 POL</h4>
+                </div>
                         </div>
                     </div>
                 </div>
