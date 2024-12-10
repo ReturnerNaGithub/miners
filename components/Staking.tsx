@@ -143,13 +143,37 @@ style= {{
                 <h4
                 style= {{
                     display:"flex",
-                    fontSize: '12px',
+                    fontSize: '28px',
                     color: "white",
-                    marginLeft:"36px",
-                    height: "50px",
-                    width:"100px",
+                    marginLeft:"16px",
+                    textDecoration: "line-through",
+
+                                                }}
+                >Price: 500 POL</h4>
+<div>
+                <h4
+                style= {{
+                    display:"flex",
+                    fontSize: '26px',
+                    color: "white",
+                    marginLeft:"16px",
+                    
                                                 }}
                 >Price: 300 POL</h4>
+
+                
+                </div>
+
+                <a
+        href="https://www.coingecko.com/en/coins/pol-ex-matic"
+        target="_blank"
+        rel="noopener noreferrer" // Security and performance
+      >
+        <h4 className="pol-price">
+POL price on Coingecko
+        </h4>
+      </a>
+
                 </div>
                         </div>
                     </div>
@@ -162,7 +186,7 @@ style= {{
                 <div className="gsd-box" style={{
 
     width: "fit-content",
-    border:"1px solid #116c7a",
+   backgroundColor: "black",
     padding: "20px",
     marginTop:"12px",
     }}>
@@ -209,7 +233,8 @@ ownedNFTs.map((nft) =>(
                 <div className="gsd-box" style={{
 
 width: "fit-content",
-border:"1px solid #116c7a",
+backgroundColor:"black",
+borderRadius:"16px",
 padding: "20px",
 marginTop:"12px",
 }}>

@@ -19,7 +19,18 @@ body {
    justify-content: space-between; 
    padding: 10px 20px;
  } 
- 
+ .pol-price {
+   background-color: rgb(17, 217, 20);
+   color:black;
+   display: flex;
+   width: 180px;
+   align-items: center;
+   border-radius: 15px;
+   padding: 10px 10px;
+ }
+
+
+
 
 /* app-for-nft style */
 .app-for-nft {

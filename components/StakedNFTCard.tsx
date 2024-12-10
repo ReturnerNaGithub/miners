@@ -47,14 +47,13 @@ transaction={() => (
         refetchOwnedNFTs();
     }}
     style={{
-        border:"none",
-        backgroundColor:"#333",
-        color:"#fff",
-        padding: "10px",
-        borderRadius:"10px",
-        cursor:"pointer",
-        width:"100%",
-        fontSize: "12px"
+        fontSize: '18px',
+        backgroundColor:"white",
+        color: "black",
+        borderRadius:"16px",
+        padding: "10px 0px",
+        height: "50px",
+        width:"100px",
     }}
 >Unstake</TransactionButton>
     </div>

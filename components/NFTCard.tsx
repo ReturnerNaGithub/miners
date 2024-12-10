@@ -36,10 +36,10 @@ export const NFTCard = ({
       <button
         onClick={() => setIsModalOpen(true)}
         style={{
-          fontSize: '12px',
-    backgroundColor:"#116c7a",
-    color: "white",
-    borderRadius:"18px",
+          fontSize: '18px',
+    backgroundColor:"white",
+    color: "black",
+    borderRadius:"16px",
     padding: "10px 0px",
     height: "50px",
     width:"100px",
