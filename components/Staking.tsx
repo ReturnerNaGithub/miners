@@ -163,17 +163,6 @@ style= {{
 
                 
                 </div>
-
-                <a
-        href="https://www.coingecko.com/en/coins/pol-ex-matic"
-        target="_blank"
-        rel="noopener noreferrer" // Security and performance
-      >
-        <h4 className="pol-price">
-POL price on Coingecko
-        </h4>
-      </a>
-
                 </div>
                         </div>
                     </div>
