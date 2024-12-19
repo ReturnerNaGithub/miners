@@ -17,7 +17,7 @@ const Footer = () => {
               height: "80%",
               objectFit: "contain",
               borderRadius:"10px ",
-              border:"2px solid black",
+           
               marginLeft:"40px"
               
             }}

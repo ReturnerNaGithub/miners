@@ -140,16 +140,28 @@ style= {{
                                 }}
                             >Buy NFT</TransactionButton>
                              <div>
-                <h4
+               <div><h4
                 style= {{
                     display:"flex",
                     fontSize: '28px',
                     color: "white",
                     marginLeft:"16px",
                     textDecoration: "line-through",
-
-                                                }}
-                >Price: 500 POL</h4>
+                    gap:"12px"
+                }}
+                >
+                    Price: 500 POL<span style={{
+                    textDecoration:"none",
+                    display:"flex",
+                    fontSize: '16px',
+                    color: "white",
+                    backgroundColor:"#116c7a",
+                    padding: "10px 10px",
+                    border:"dots",
+                    borderRadius:"18px",
+                }}>Next Halving 0,5 MINE Daily</span></h4>
+               
+                </div> 
 <div>
                 <h4
                 style= {{
