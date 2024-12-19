@@ -78,8 +78,8 @@ export const Staking = () => {
                     <div className="gsd-nft" >
                         <div className="w-1/2 mb-12">
                             <img
-                                src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmXo8Zmrm9KeoLkj4PZPW1E2KER5NVMvwdjgs1Rpzr33Ts"
-                                alt="zamena"
+                                src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmPP1BoLfaSjiSazUguD31ukkVGXBXr9HsAPg5iq3Xu25p"
+                                alt="panel"
                                 width={850}
                                 height={600}
                                 style={{
