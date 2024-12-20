@@ -46,7 +46,7 @@ export const StakeRewards = () => {
             width: "fit-content",
              height:"fit-content",
              display:"flex",
-             gap:"60px",
+             gap:"40px",
              padding:"40px",
              marginTop:"20px",
              alignItems: 'center',
