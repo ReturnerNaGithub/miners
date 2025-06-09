@@ -14,7 +14,7 @@ const Head = () => {
 href="https://www.facebook.com/GamingStudioDamana"  
 target="_blank" 
 rel="noopener noreferrer">
-  <img src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/Qma49LjDEwqz3TePcBrWUwtviui9YJwHEHqqXXShYy4jgp/Miners%20nation%20-%20LOGO%20-%20BG.png"
+  <img src="https://drive.google.com/drive/folders/1XmIutqFT9xYLx5AYlUK9osGxVCYJJsID"
   alt="logo"
   height={100}
   width={200} />
