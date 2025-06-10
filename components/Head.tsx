@@ -14,7 +14,7 @@ const Head = () => {
 href="https://www.facebook.com/GamingStudioDamana"  
 target="_blank" 
 rel="noopener noreferrer">
-  <img src="https://drive.google.com/file/d/1NTCGyOdLbtpnNRrrblZVwiEf7BuLVi9z/view?usp=drive_link"
+  <img src="https://drive.google.com/file/d/1ObTdUqRgFbdaTu5j_Vh0BrIcLciW2lWg/view?usp=drive_link"
   alt="logo"
   height={100}
   width={200} />
