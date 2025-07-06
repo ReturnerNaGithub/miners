@@ -9,7 +9,7 @@ const Footer2 = () => {
     <div>
       <div className='news'>
         <img
-          src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmNrfUAJ1E3WqtnwZL9XnTW37ZZVsz3AJcuCPVuzHMATnr/free%202play...png"
+          src="https://i.imgur.com/i9oyBs1.png"
           alt="reklama3"
           width={520}
           height={300}
@@ -20,7 +20,7 @@ const Footer2 = () => {
           }}
         />
         <img
-          src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmNrfUAJ1E3WqtnwZL9XnTW37ZZVsz3AJcuCPVuzHMATnr/hero%20reklama.png"
+          src="https://i.imgur.com/i9oyBs1.png"
           alt="reklama4"
           width={520}
           height={300}
