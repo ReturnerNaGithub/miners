@@ -57,7 +57,7 @@ justifyContent: "center",
              }}>
             {!isTokenBalanceLoading && (
             <div>
-<Token src="https://white-reasonable-barnacle-530.mypinata.cloud/ipfs/QmZS3PrtyL5wpEcxPfXynnhw3mPrmgychRuxuXJRBZSqgq"
+<Token src="https://i.imgur.com/0CZR0rW.png"
  alt ="token" />
 
                 </div>
