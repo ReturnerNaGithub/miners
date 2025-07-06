@@ -78,7 +78,7 @@ export const Staking = () => {
                     <div className="gsd-nft" >
                         <div className="w-1/2 mb-12">
                             <img
-                                src="https://i.imgur.com/0CZR0rW.png"
+                                src="https://i.imgur.com/o32dDYD.gif"
                                 alt="panel"
                                 width={850}
                                 height={600}
