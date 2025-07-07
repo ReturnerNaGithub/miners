@@ -57,7 +57,7 @@ justifyContent: "center",
              }}>
             {!isTokenBalanceLoading && (
             <div>
-<Token src="https://i.imgur.com/0CZR0rW.png"
+<Token src="https://i.imgur.com/GR5L6WZ.gif"
  alt ="token" />
 
                 </div>
