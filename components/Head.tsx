@@ -11,7 +11,7 @@ const Head = () => {
     <div className='header'>
 
      <a 
-href="https://www.facebook.com/GamingStudioDamana"  
+href="https://www.miners-nation.com/"  
 target="_blank" 
 rel="noopener noreferrer">
   <img src="https://i.imgur.com/jDnEjMd.png"
