@@ -20,7 +20,7 @@ const Footer2 = () => {
           }}
         />
         <img
-          src="https://i.imgur.com/7VmfyRz.gif"
+          src="https://i.imgur.com/0oXRLMT.png"
           alt="reklama4"
           width={520}
           height={300}
