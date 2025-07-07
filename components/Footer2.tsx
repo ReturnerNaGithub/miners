@@ -38,7 +38,7 @@ const Footer2 = () => {
         <h2
           style={{
             color: "white",
-            fontSize: "1.2rem",
+            fontSize: "0.8rem",
             fontWeight: "bold",
             marginTop: "0.5rem",
             marginBottom:"0.2rem",
