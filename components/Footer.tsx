@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='app-for-nft'>
         <div className="mt-0">
           <img
-            src="https://i.imgur.com/uvPE6kQ.png"
+            src="https://i.imgur.com/QxJKW62.gif"
             alt="reklama1"
             width={720}
             height={380}
