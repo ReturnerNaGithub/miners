@@ -150,7 +150,7 @@ style= {{
                     gap:"12px"
                 }}
                 >
-                    Price: 500 POL</h4>
+                    Price: 1500 POL</h4>
                
                 </div> 
 <div>
@@ -162,7 +162,7 @@ style= {{
                     marginLeft:"16px",
                     
                                                 }}
-                >Price: 300 POL</h4>
+                >Price: 1000 POL</h4>
 
                 
                 </div>
