@@ -9,7 +9,7 @@ const Footer2 = () => {
     <div>
       <div className='news'>
         <img
-          src="https://i.imgur.com/i9oyBs1.png"
+          src="https://i.imgur.com/uvPE6kQ.png"
           alt="reklama3"
           width={520}
           height={300}
