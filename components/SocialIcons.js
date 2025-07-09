@@ -32,7 +32,7 @@ function SocialIcons ()  {
       </a>
      
       <a
-        href=" https://www.youtube.com/channel/UC61im7Q2c0PtfKkrb852v6A"
+        href=" https://www.youtube.com/@CryptoMN_24"
         target="_blank"
         rel="noopener noreferrer" // Security and performance
       >
