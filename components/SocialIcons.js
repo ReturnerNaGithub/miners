@@ -46,7 +46,7 @@ function SocialIcons ()  {
         <GoMail className="icons go"/>
       </a>
        <a
-        href="https://discord.gg/8DZxZBrC"
+        href="https://destruction-lyart.vercel.app/"
         target="_blank"
         rel="noopener noreferrer" // Security and performance
       >
