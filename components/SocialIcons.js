@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaDiscord, FaYoutube } from "react-icons/fa";
-import { GoMail } from "react-icons/go";
+
 
 function SocialIcons ()  {
   
@@ -38,15 +38,9 @@ function SocialIcons ()  {
       >
        <FaYoutube className="icons youtube" />
       </a>
-      <a
-        href="https://discord.gg/8DZxZBrC"
-        target="_blank"
-        rel="noopener noreferrer" // Security and performance
-      >
-        <GoMail className="icons go"/>
-      </a>
+      
        <a
-        href="https://destruction-lyart.vercel.app/"
+        href="https://discord.gg/DPFttUZb"
         target="_blank"
         rel="noopener noreferrer" // Security and performance
       >
